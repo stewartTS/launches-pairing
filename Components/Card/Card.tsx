@@ -1,4 +1,4 @@
-import styles from '../../styles/Home.module.css';
+import styles from './Card.module.css';
 import { useState } from 'react';
 import Modal from '../Modal/Modal';
 

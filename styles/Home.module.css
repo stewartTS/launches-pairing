@@ -76,6 +76,10 @@
   border-radius: 5px;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

@@ -1,9 +1,7 @@
-import Head from 'next/head';
-import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { useQuery } from 'react-query';
 import { useState } from 'react';
-import Card from '../Components/Card';
+import Card from '../Components/Card/Card';
 
 const fetchCardData = async (): Promise<unknown> => {
   const payload = await fetch('https://api.spacexdata.com/v3/launches');
@@ -22,7 +20,6 @@ export default function Home() {
 
   const renderCards = (allCardData) => {
     const topTen = allCardData?.slice(0, 10);
-    console.log(topTen);
     return topTen?.map((flight) => <Card key={flight.flight_number} data={flight} />);
   };
 

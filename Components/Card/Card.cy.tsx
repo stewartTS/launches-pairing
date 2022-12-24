@@ -1,5 +1,5 @@
 import Card from './Card';
-import { object } from './cardObject';
+import { object } from '../cardObject';
 
 describe('Card', () => {
   const data = object;

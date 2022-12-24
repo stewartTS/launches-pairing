@@ -1,6 +1,6 @@
-import styles from '../styles/Home.module.css';
+import styles from '../../styles/Home.module.css';
 import { useState } from 'react';
-import Modal from './Modal/Modal';
+import Modal from '../Modal/Modal';
 
 export default function Card({ data }) {
   const [modal, setModal] = useState(false);
@@ -9,10 +9,12 @@ export default function Card({ data }) {
     setModal(!modal);
   };
 
+  const date = new Date(data.launch_date_utc).toDateString();
+
   return (
     <div className={styles.card}>
       <h2>{data.mission_name}</h2>
-      <p>{data.launch_date_utc}</p>
+      <p>{date}</p>
       <img src={data.links.mission_patch_small} />
       <h3>Cores</h3>
       <ul>
